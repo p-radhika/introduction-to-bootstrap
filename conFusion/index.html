@@ -71,7 +71,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="loginButton">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -103,12 +103,12 @@
     </div>
 
 
-    <div id="reserveform" class="modal fade" role="dialog">
+    <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" id="reserveButton">
                         &times;
                     </button>
                 </div>
@@ -509,6 +509,18 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
+    });
+
+
+    $("#loginButton").click(function () {
+        console.log("loginButton clicked");
+        $("#loginModal").modal("show");
+    });
+
+
+    $("#reserveButton").click(function () {
+        console.log("reserveButton clicked");
+        $("#reserveModal").modal("show");
     });
 </script>
 
